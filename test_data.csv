@@ -1,0 +1,11 @@
+image_id,image_filename,num_animals,animal_label_1,animal_label_2,left_eye_x_1,left_eye_y_1,right_eye_x_1,right_eye_y_1,expected_inter_eye_distance_1,left_eye_x_2,left_eye_y_2,right_eye_x_2,right_eye_y_2,expected_inter_eye_distance_2,expected_right_eye_distance_pairwise,notes
+147498,000000147498.jpg,2,dog,cat,150.0,200.0,250.0,210.0,100.50,460.2,210.8,520.1,215.3,60.05,270.15,Two animals in clear view - dog and cat
+393281,000000393281.jpg,2,cat,bird,280.5,310.2,340.8,320.1,61.11,475.2,290.5,510.3,295.8,35.50,171.23,Cat with small bird in same frame
+286391,000000286391.jpg,2,elephant,giraffe,200.0,250.5,320.5,260.3,120.90,650.0,300.0,780.0,310.5,130.42,462.23,Large animals with good separation
+118913,000000118913.jpg,2,horse,cow,200.0,180.0,280.0,200.0,82.46,520.0,200.0,620.0,220.0,101.98,340.59,Different quadrupeds
+185629,000000185629.jpg,2,bird,bird,340.0,180.0,400.0,190.0,60.83,500.0,190.0,560.0,200.0,60.83,160.31,Small bird pair - challenging detection
+288196,000000288196.jpg,2,dog,sheep,200.0,280.0,280.0,300.0,82.46,500.0,310.0,600.0,330.0,101.98,321.40,Dog and sheep interaction
+527490,000000527490.jpg,2,zebra,giraffe,180.0,220.0,280.0,240.0,101.98,520.0,180.0,650.0,200.0,131.53,372.16,Safari animals with distant gaze
+248372,000000248372.jpg,2,dog,dog,100.0,150.0,200.0,160.0,100.50,450.0,200.0,520.0,210.0,70.71,323.88,Two dogs - same species detection
+638259,000000638259.jpg,2,cat,cat,150.0,200.0,220.0,220.0,72.80,350.0,210.0,420.0,230.0,72.80,200.25,Two cats close to each other
+720453,000000720453.jpg,2,horse,zebra,250.0,280.0,380.0,295.0,130.86,600.0,150.0,750.0,170.0,151.33,390.54,Horse and zebra with strong perspective
