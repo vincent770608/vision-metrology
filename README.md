@@ -11,7 +11,7 @@
 3. [環境安裝與本地運行](#環境安裝與本地運行)
 4. [Docker 部署](#docker-部署)
 5. [API 文件](#api-文件)
-6. [流程架構圖]() 文件
+6. [流程架構圖](#流程架構圖)
 ---
 
 ## 🎯 專案介紹
@@ -216,7 +216,7 @@ pip install -r requirements.txt
 
 ```bash
 # 下載COCO 資料集, 並過濾出有兩隻動物(含或以上)的圖片
-python app/data_filter/data_filter.py
+python app/data/data_filter.py
 
 # 偵測動物個體並產出 Body Mask
 python app/services/instance_segmentation.py
@@ -241,13 +241,13 @@ uvicorn main:app --reload --host 0.0.0.0 --port 8000
 uvicorn main:app --host 0.0.0.0 --port 8000 --workers 2
 ```
 
-首次啟動時，API 會自動下載以下模型（約 2.5GB）：
+首次啟動時，API 會自動下載以下模型（約 670MB）：
 
 ```
 ✅ 下載模型:
-  - Mask R-CNN (via torchvision): ~170 MB
-  - HRNet-w32 AP-10K: ~120 MB
-  - HRNet ONNX: ~120 MB (轉換生成)
+  - Mask R-CNN (via torchvision): ~178 MB (自動下載)
+  - HRNet-w32 AP-10K: ~114 MB
+  - HRNet ONNX: ~1.9 MB (由 PyTorch 權重轉換生成)
   - SAM ViT-B: ~375 MB
 ```
 
@@ -421,7 +421,7 @@ curl -X POST "http://localhost:8000/v1/metrology/animal-eyes" \
 | `id` | int | 同圖中動物的唯一ID (0-indexed) |
 | `label` | str | 動物類別名稱 (dog, cat, bird, ...) |
 | `score` | float | Mask R-CNN 偵測信心分數 [0, 1] |
-| `bbox` | [float] | 邊界框 `[x, y, width, height]` |
+| `bbox` | [float] | 邊界框 `[x1, y1, x2, y2]` |
 | `left_eye` | object | 左眼信息 (見下表) 或 `null` |
 | `right_eye` | object | 右眼信息 (見下表) 或 `null` |
 | `inter_eye_distance_px` | float | 雙眼距離（像素） 或 `null` |
