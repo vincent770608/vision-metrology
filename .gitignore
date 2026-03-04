@@ -1,9 +1,46 @@
-.env
-*_venv/
-*.ipynb
+# Python
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual env
+venv/
+*_venv/
+.venv/
+
+# IDE
 .vscode/
-# Pycharm
-.idea
+.idea/
+*.swp
+*.swo
+
+# Jupyter
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# 環境變數
+.env
+.env.*
+
+# ===== 模型檔 (太大，不上傳) =====
+models/
+app/models/*.pth
+app/models/*.onnx
+app/models/*.ckpt
+app/models/*.bin
+
+# ===== 資料 (不上傳) =====
 data/
-/app/models
+
+# ===== 其他大檔 =====
+*.npz
+*.tar.gz
+*.zip
