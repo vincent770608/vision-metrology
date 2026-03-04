@@ -11,6 +11,7 @@
 3. [環境安裝與本地運行](#環境安裝與本地運行)
 4. [Docker 部署](#docker-部署)
 5. [API 文件](#api-文件)
+6. [流程架構圖]() 文件
 ---
 
 ## 🎯 專案介紹
@@ -492,3 +493,19 @@ curl -X POST "http://localhost:8000/v1/metrology/animal-eyes" \
 }
 ```
 
+## 流程架構圖
+![img_4.png](img_4.png)
+
+### 範例效果
+
+#### Instance Segmentation
+![img.png](img.png)
+
+#### Keypoint Detection
+![img_1.png](img_1.png)
+
+#### Eyes Segmentation
+![img_2.png](img_2.png)
+
+#### Eyes Metrology
+![img_3.png](img_3.png)
