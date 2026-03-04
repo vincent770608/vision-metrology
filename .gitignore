@@ -1,0 +1,9 @@
+.env
+*_venv/
+*.ipynb
+__pycache__/
+.vscode/
+# Pycharm
+.idea
+data/
+/app/models
